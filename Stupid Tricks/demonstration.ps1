@@ -5,19 +5,22 @@ if (-not (test-path 'c:\temp\demo'))
 }
 push-location 'c:\temp\demo'
 
-$demofiles = @('test1.txt','test2.txt','test3.txt')
-$demofiles | foreach-object {
-    if (-not (test-path $_))
-        {
-            new-item -path $_
-        }
-}
+remove-item '.\*' -force -Recurse
+
+@('test1.txt','test2.txt','test3.txt') | foreach-object { new-item -path $_ -ErrorAction 'silentlycontinue' }
 #endregion
+
 
 
 #region 01. select-object hashtables
 get-childitem
+get-childitem | select-object *
 get-childitem | select-object fullname,creationtime,lastwritetime
+
+get-childitem | select-object fullname,creationtime,lastwritetime,@{l='Diff Btwn Write & Create';e={new-timespan $_.creationtime $_.lastwritetime}}
+
+write-output 'some change' | out-file 'test2.txt'
+
 get-childitem | select-object fullname,creationtime,lastwritetime,@{l='Diff Btwn Write & Create';e={new-timespan $_.creationtime $_.lastwritetime}}
 #endregion
 
@@ -26,21 +29,29 @@ get-cimclass -ClassName win32_operatingsystem
 get-cimclass -ClassName win32_operatingsystem | get-member
 get-command get-cimclass
 get-command get-cimclass | select *
+get-command get-cimclass | select -ExpandProperty parameters
 
 #you can see the definition of functions (but not cmdlets)
 function invoke-test
 {
     write-output 'did it'
 }
+
 invoke-test
+
 get-command invoke-test | select *
+
+(get-command invoke-test).definition
 
 $thing1 = 'This is an item'
 $thing2 = @('This is another item','This is one more item')
 $thing1; $thing2
 
 $thing1 | gm
-$thing2 | gm #LIES! It's an array and get-member is returning the info for the first item in the array
+$thing2 | gm #LIES!
+
+$thing3 = @([int]21,[string]'hello',[pscustomobject]'goodbye')
+$thing3 | gm
 
 $thing1.gettype()
 $thing2.gettype()
@@ -68,18 +79,22 @@ get-wmiobject -class win32_operatingsystem | select pscomputername,caption,osarc
 get-wmiobject -class win32_operatingsystem | select pscomputername,caption,osarch*,registereduser | format-list
 get-wmiobject -class win32_operatingsystem | select pscomputername,caption,osarch*,registereduser,version | format-table
 get-wmiobject -class win32_operatingsystem | select pscomputername,caption,osarch*,registereduser,version | out-gridview
+
+get-childitem | select name,last* | ogv
 #endregion
 
 #region 05. r and scb
-clear-host; write-output 'omg this is a long command that i would not want to type again but i sure would like to reproduce the output!'
+clear-host
+
+write-output 'omg this is a long command that i would not want to type again but i sure would like to reproduce the output!'
 r
 
-clear-host; write-output 'now this is another command that i would not want to type'
+write-output 'now this is another command that i would not want to type'
 r
 
 get-alias r
 
-get-history
+get-history | sort -Descending | select -first 10
 
 r #number
 
@@ -89,14 +104,13 @@ get-alias scb
 #endregion
 
 #region 06. splatting
-get-childitem -path 'c:\temp\demo' -Exclude test2.txt
+new-item -ItemType File -Path 'c:\temp\demo' -name 'test4.txt'
 
-$gciparams = @{'path'='c:\temp\demo'; 'exclude'='test2.txt'}
-get-childitem @gciparams
+$newitemparams = @{'itemtype'='file'; 'path'='c:\temp\demo'; 'name'='test5.txt'}
+new-item @newitemparams
 
-1..3 | foreach-object {
-    get-childitem @gciparams -depth $_ 
-} #returns all the same data, but the depth was actually different... it's just an example
+$newitemparams = @{'itemtype'='file'; 'path'='c:\temp\demo'}
+6..10 | foreach-object { new-item @newitemparams -name "test$_.txt" }
 
 #this is going to fail because I don't have AD in this demo
 $adusers = @('thomas','angela','matt','aman')
@@ -116,11 +130,13 @@ $splitstring.split('t')
 $splitstring.split('st')
 $splitstring -split 'st'
 
-$splitstring.trim('iecht') #.trim() also takes an array of chars
+$splitstring.trim('iecht') #.trim() also works this way
 #endregion
 
 #region 08. get-random min and max
 -join (1..10 | % { get-random -Minimum 1 -Maximum 10 })
+
+-join (1..250 | % { get-random -Minimum 1 -Maximum 10 })
 
 -join (1..250 | % { get-random -Minimum 1 -Maximum 2 })
 
@@ -156,6 +172,8 @@ $erroractionpreference = 'continue'
 
 new-item 'test1.txt'
 new-item 'test1.txt' -ErrorAction 'ignore'
+
+$?
 
 $ConfirmPreference
 $ConfirmPreference = 'none'
@@ -205,6 +223,19 @@ $couldbeempty = '      '
 [string]::IsNullOrWhiteSpace($couldbeempty)
 $couldbeempty -eq $false
 $couldbeempty -eq $true
+#endregion
+
+#region 17. wrap stuff in $()
+$getOS = get-wmiobject win32_operatingsystem | select caption,version
+$getOS
+$getOS.caption
+$getOS.version
+
+write-output "The caption is $getOS.caption and the version is $getOS.version"
+
+write-output "The caption is $($getOS.caption) and the version is $($getOS.version)"
+
+write-output "Today's is $((get-date).dayofweek) and it's currently $(get-date -format hh:mm:ss)"
 #endregion
 
 #region 14. nullable parameters
@@ -283,8 +314,7 @@ foreach ($checkin in $namesdates.GetEnumerator())
 write-host 'something'
 write-output 'something'
 
-write-host 'something' -ForegroundColor green -BackgroundColor Yellow -nonewline
-write-host ' else' -ForegroundColor blue -BackgroundColor black
+write-host 'something' -ForegroundColor green -BackgroundColor darkYellow -nonewline; write-host ' else' -ForegroundColor red -BackgroundColor black
 
 write-output "I can't do that"
 
@@ -297,19 +327,6 @@ $outputfromoutput
 #region 16. take the first dir from a list (breaking out of a foreach loop)
 $possibleinstalls = @('c:\nope\thing.txt','c:\temp\demo\test1.txt','c:\temp\demo\test2.txt')
 $possibleinstalls | foreach-object { if (test-path $_) { $_; break } }
-#endregion
-
-#region 17. wrap stuff in $()
-$getOS = get-wmiobject win32_operatingsystem | select caption,version
-$getOS
-$getOS.caption
-$getOS.version
-
-write-output "The caption is $getOS.caption and the version is $getOS.version"
-
-write-output "The caption is $($getOS.caption) and the version is $($getOS.version)"
-
-write-output "Today's is $((get-date).dayofweek) and it's currently $(get-date -format hh:mm:ss)"
 #endregion
 
 #region 18. split a string on a lookahead or lookbehind
