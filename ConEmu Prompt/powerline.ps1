@@ -1,7 +1,5 @@
-using module PowerLine
-using namespace PowerLine
-
-
+$add = @"
+import-module powerline
 
 $global:PowerLinePrompt = 1,
     # two lines
@@ -21,4 +19,6 @@ $global:PowerLinePrompt = 1,
         @{ bg = "DarkBlue"; fg = "White"; text = { Split-Path $pwd -leaf } }
     )
 
-Set-PowerLinePrompt -CurrentDirectory -PowerLineFont -Title { "PowerShell - {0} ({1})" -f (Convert-Path $pwd),  $pwd.Provider.Name }
+Set-PowerLinePrompt -CurrentDirectory -PowerLineFont
+"@
+$add | out-file -append -FilePath $profile 
