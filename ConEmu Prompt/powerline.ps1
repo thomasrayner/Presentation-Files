@@ -1,4 +1,4 @@
-$add = @"
+$add = @'
 import-module powerline
 
 $global:PowerLinePrompt = 1,
@@ -20,5 +20,5 @@ $global:PowerLinePrompt = 1,
     )
 
 Set-PowerLinePrompt -CurrentDirectory -PowerLineFont
-"@
+'@
 $add | out-file -append -FilePath $profile 
