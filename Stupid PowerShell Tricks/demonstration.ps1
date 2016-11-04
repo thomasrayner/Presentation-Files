@@ -5,11 +5,9 @@ if (-not (test-path 'c:\temp\demo'))
 }
 push-location 'c:\temp\demo'
 
-remove-item '*' -force -Recurse
+remove-item '.\*' -force -Recurse
 
 @('test1.txt','test2.txt','test3.txt') | foreach-object { new-item -path $_ -ErrorAction 'silentlycontinue' }
-
-clear-host
 #endregion
 
 
@@ -80,10 +78,6 @@ get-wmiobject -class win32_operatingsystem | select pscomputername,caption,osarc
 
 get-wmiobject -class win32_operatingsystem | select pscomputername,caption,osarch*,registereduser | format-list
 get-wmiobject -class win32_operatingsystem | select pscomputername,caption,osarch*,registereduser,version | format-table
-
-(measure-command { get-wmiobject -class win32_operatingsystem | select pscomputername,caption,osarch*,registereduser | format-table }).ticks
-(measure-command { get-wmiobject -class win32_operatingsystem | select pscomputername,caption,osarch*,registereduser }).ticks
-
 get-wmiobject -class win32_operatingsystem | select pscomputername,caption,osarch*,registereduser,version | out-gridview
 
 get-childitem | select name,last* | ogv
@@ -167,8 +161,7 @@ get-childitem
 new-item 'not going to happen.txt'
 new-item 'not going to happen.txt' -whatif:$false
 
-$PSDefaultParameterValues.remove('*:whatif')
-$PSDefaultParameterValues
+$PSDefaultParameterValues.clear()
 #endregion
 
 #region 10. erroractionpreference confirmpreference
@@ -199,15 +192,11 @@ pop-location
 #endregion
 
 #region 12. begin, process and end in foreach-object
-$adusers = @('thomas','angela','matt','aman')
+$adusers
 $adusers | foreach-object { write-output "$_ is a nice person" }
 
 $adusers | foreach-object -begin { write-output 'the third line is false' } `
                           -process { write-output "$_ is a nice person" } `
-                          -end { write-output 'the first line might be false too' } 
-
-$adusers | foreach-object -begin { $somevar = 'value I calculated here' } `
-                          -process { write-output "$_ is a nice person and also $somevar" } `
                           -end { write-output 'the first line might be false too' } 
 #endregion
 
