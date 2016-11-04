@@ -8,6 +8,7 @@ push-location 'c:\temp\demo'
 remove-item '.\*' -force -Recurse
 
 @('test1.txt','test2.txt','test3.txt') | foreach-object { new-item -path $_ -ErrorAction 'silentlycontinue' }
+clear-host
 #endregion
 
 
@@ -270,7 +271,10 @@ $namesdates = @{
 
 $namesdates['thomas']
 $namesdates['matthew']
-$datesnames['nope']
+$namesdates['nope']
+
+$namesdates.containskey('matthew')
+$namesdates.ContainsKey('nope')
 
 foreach ($checkin in $namesdates.GetEnumerator())
 {
