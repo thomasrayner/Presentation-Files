@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<opml version="1.0">
+    <head>
+        <title>Thomas subscriptions in feedly Cloud</title>
+    </head>
+    <body>
+        <outline text="PlanetPowershell" title="PlanetPowershell">
+            <outline type="rss" text="Planet PowerShell" title="Planet PowerShell" xmlUrl="https://www.planetpowershell.com/feed" htmlUrl="https://www.planetpowershell.com/"/>
+        </outline>
+        <outline text="i" title="i">
+            <outline type="rss" text="Development In A Blink" title="Development In A Blink" xmlUrl="https://dfinke.github.io/feed.xml" htmlUrl="https://dfinke.github.io//"/>
+        </outline>
+        <outline type="rss" text="The Official System Center Team Blog" title="The Official System Center Team Blog" xmlUrl="http://blogs.technet.com/b/systemcenter/rss.aspx" htmlUrl="https://blogs.technet.microsoft.com/hybridcloud"/>
+        <outline type="rss" text="Observations from a Tech Architect: Enterprise Implementation Issues &amp; Solutions" title="Observations from a Tech Architect: Enterprise Implementation Issues &amp; Solutions" xmlUrl="http://rss.ittoolbox.com/rss/eai-implementation.xml" htmlUrl="http://it.toolbox.com/blogs/enterprise-solutions"/>
+        <outline type="rss" text="Cloud Administrator" title="Cloud Administrator" xmlUrl="https://cloudadministrator.wordpress.com/feed/" htmlUrl="https://cloudadministrator.wordpress.com"/>
+        <outline type="rss" text="Building Clouds Blog" title="Building Clouds Blog" xmlUrl="http://blogs.technet.com/b/privatecloud/rss.aspx" htmlUrl="https://blogs.technet.microsoft.com/privatecloud"/>
+        <outline type="rss" text="Windows PowerShell Blog" title="Windows PowerShell Blog" xmlUrl="http://blogs.msdn.com/b/powershell/rss.aspx" htmlUrl="https://blogs.msdn.microsoft.com/powershell"/>
+        <outline type="rss" text="MIRU.CH" title="MIRU.CH" xmlUrl="http://www.miru.ch/feed/" htmlUrl="http://www.miru.ch"/>
+        <outline type="rss" text="Working Sysadmin" title="Working Sysadmin" xmlUrl="http://www.workingsysadmin.com/feed/" htmlUrl="http://www.workingsysadmin.com"/>
+        <outline type="rss" text="Hey, Scripting Guy! Blog" title="Hey, Scripting Guy! Blog" xmlUrl="http://blogs.technet.com/b/heyscriptingguy/rss.aspx" htmlUrl="https://blogs.technet.microsoft.com/heyscriptingguy"/>
+        <outline type="rss" text="PowerShell Scripts Blog" title="PowerShell Scripts Blog" xmlUrl="http://pshscripts.blogspot.com/feeds/posts/default" htmlUrl="http://pshscripts.blogspot.com/"/>
+        <outline type="rss" text="Everything Sysadmin" title="Everything Sysadmin" xmlUrl="http://everythingsysadmin.com/atom.xml" htmlUrl="http://everythingsysadmin.com/"/>
+        <outline type="rss" text="The Lone Sysadmin" title="The Lone Sysadmin" xmlUrl="http://feeds.feedburner.com/lonesysadmin/mkpe" htmlUrl="https://lonesysadmin.net"/>
+        <outline type="rss" text="Command Line Kung Fu" title="Command Line Kung Fu" xmlUrl="http://blog.commandlinekungfu.com/feeds/posts/default" htmlUrl="http://blog.commandlinekungfu.com/"/>
+        <outline type="rss" text="neilp - System Center Premier Field Engineer" title="neilp - System Center Premier Field Engineer" xmlUrl="http://blogs.technet.com/b/neilp/rss.aspx" htmlUrl="https://blogs.technet.microsoft.com/neilp"/>
+        <outline type="rss" text="Microsoft Server and Cloud Platform Blog" title="Microsoft Server and Cloud Platform Blog" xmlUrl="http://blogs.technet.com/b/server-cloud/rss.aspx" htmlUrl="https://blogs.technet.microsoft.com/hybridcloud"/>
+        <outline type="rss" text="The Microsoft MVP Award Program Blog" title="The Microsoft MVP Award Program Blog" xmlUrl="http://blogs.msdn.com/b/mvpawardprogram/rss.aspx" htmlUrl="https://blogs.msdn.microsoft.com/mvpawardprogram"/>
+        <outline type="rss" text="PowerShell FTW!" title="PowerShell FTW!" xmlUrl="http://www.david-obrien.net/feed/" htmlUrl="https://david-obrien.net/"/>
+        <outline type="rss" text="Standalone Sysadmin" title="Standalone Sysadmin" xmlUrl="http://feeds.feedburner.com/standalone-sysadmin" htmlUrl="http://www.standalone-sysadmin.com/blog"/>
+        <outline type="rss" text="The Official System Center Orchestrator Team Blog" title="The Official System Center Orchestrator Team Blog" xmlUrl="http://blogs.technet.com/b/orchestrator/rss.aspx" htmlUrl="https://blogs.technet.microsoft.com/orchestrator"/>
+        <outline type="rss" text="System Center Central » Pete Zerger" title="System Center Central » Pete Zerger" xmlUrl="http://www.systemcentercentral.com/author/pzerger/feed/" htmlUrl="http://www.systemcentercentral.com"/>
+        <outline type="rss" text="Boiling The Linux and Windows" title="Boiling The Linux and Windows" xmlUrl="http://boilinglinux.kiosgeek.com/feed/" htmlUrl="http://boilinglinux.kiosgeek.com"/>
+        <outline type="rss" text="Sys Admin Jam" title="Sys Admin Jam" xmlUrl="http://sysjam.wordpress.com/feed/" htmlUrl="https://sysjam.wordpress.com"/>
+        <outline type="rss" text="www.contoso.se" title="www.contoso.se" xmlUrl="http://contoso.se/blog/?feed=rss2" htmlUrl="http://contoso.se/blog"/>
+        <outline type="rss" text="Microsoft Azure Blog" title="Microsoft Azure Blog" xmlUrl="http://azure.microsoft.com/blog/feed/" htmlUrl="https://azure.microsoft.com/blog/"/>
+        <outline type="rss" text="Canadian IT Professionals" title="Canadian IT Professionals" xmlUrl="http://feeds.feedburner.com/CanITPro" htmlUrl="https://blogs.technet.microsoft.com/canitpro"/>
+        <outline type="rss" text="Trond's Working!" title="Trond's Working!" xmlUrl="http://hindenes.com/trondsworking/feed/" htmlUrl="http://hindenes.com/trondsworking"/>
+        <outline type="rss" text="Ask the Directory Services Team" title="Ask the Directory Services Team" xmlUrl="http://blogs.technet.com/b/askds/rss.aspx" htmlUrl="https://blogs.technet.microsoft.com/askds"/>
+        <outline type="rss" text="Adam, the Automator" title="Adam, the Automator" xmlUrl="http://www.adamtheautomator.com/feed/" htmlUrl="http://www.adamtheautomator.com"/>
+        <outline type="rss" text="Microsoft Security Content: Comprehensive Edition" title="Microsoft Security Content: Comprehensive Edition" xmlUrl="http://technet.microsoft.com/en-us/security/rss/comprehensive" htmlUrl="https://technet.microsoft.com/en-us/security/bulletin"/>
+        <outline type="rss" text="Seven IT  Blog" title="Seven IT  Blog" xmlUrl="http://sevenitblog.com/feed/" htmlUrl="https://sevenitblog.com"/>
+        <outline type="rss" xmlUrl="http://powershelldistrict.com/feed/" htmlUrl="http://powershelldistrict.com"/>
+        <outline type="rss" text="The Official Configuration Manager Support Team Blog" title="The Official Configuration Manager Support Team Blog" xmlUrl="http://blogs.technet.com/b/configurationmgr/atom.aspx" htmlUrl="https://blogs.technet.microsoft.com/configurationmgr"/>
+        <outline type="rss" text="US-CERT Bulletins" title="US-CERT Bulletins" xmlUrl="https://www.us-cert.gov/ncas/bulletins.xml" htmlUrl="https://www.us-cert.gov/ncas/bulletins.xml"/>
+        <outline type="rss" text="Learn Powershell | Achieve More" title="Learn Powershell | Achieve More" xmlUrl="http://learn-powershell.net/feed/" htmlUrl="https://learn-powershell.net"/>
+        <outline type="rss" text="PwrShell.net" title="PwrShell.net" xmlUrl="http://pwrshell.net/feed/" htmlUrl="https://pwrshell.net"/>
+        <outline type="rss" text="LazyWinAdmin" title="LazyWinAdmin" xmlUrl="http://feeds.feedburner.com/Superblackbook" htmlUrl="http://www.lazywinadmin.com/"/>
+        <outline type="rss" text="Development in a Blink" title="Development in a Blink" xmlUrl="http://www.dougfinke.com/blog/index.php/feed/" htmlUrl="http://dougfinke.com/blog"/>
+        <outline type="rss" text="Dave Wyatt's Blog" title="Dave Wyatt's Blog" xmlUrl="http://davewyatt.wordpress.com/feed/" htmlUrl="https://davewyatt.wordpress.com"/>
+        <outline type="rss" text="Trevor Sullivan's Tech Room" title="Trevor Sullivan's Tech Room" xmlUrl="http://trevorsullivan.net/feed/" htmlUrl="https://trevorsullivan.net"/>
+        <outline type="rss" text="Mike F Robbins" title="Mike F Robbins" xmlUrl="http://mikefrobbins.com/feed/" htmlUrl="http://mikefrobbins.com"/>
+        <outline type="rss" text="Petri IT Knowledgebase" title="Petri IT Knowledgebase" xmlUrl="http://feeds2.feedburner.com/Petri" htmlUrl="https://www.petri.com"/>
+        <outline type="rss" text="The Lonely Administrator" title="The Lonely Administrator" xmlUrl="http://jdhitsolutions.com/blog/feed/" htmlUrl="http://jdhitsolutions.com/blog"/>
+        <outline type="rss" text="Energized About Windows PowerShell" title="Energized About Windows PowerShell" xmlUrl="http://www.powershell.ca/feed" htmlUrl="http://www.energizedtech.com"/>
+        <outline type="rss" text="Energized About PowerShell" title="Energized About PowerShell" xmlUrl="http://ye110wbeard.wordpress.com/feed/" htmlUrl="https://ye110wbeard.wordpress.com"/>
+        <outline type="rss" text="Comments on:" title="Comments on:" xmlUrl="http://powershell.org/wp/feed/" htmlUrl="https://powershell.org"/>
+        <outline type="rss" text="PowerShell for Windows Admins" title="PowerShell for Windows Admins" xmlUrl="http://itknowledgeexchange.techtarget.com/powershell/feed/" htmlUrl="http://itknowledgeexchange.techtarget.com/powershell"/>
+        <outline type="rss" text="Poshoholic" title="Poshoholic" xmlUrl="http://poshoholic.com/feed/" htmlUrl="https://poshoholic.com"/>
+        <outline type="rss" text="Don Jones" title="Don Jones" xmlUrl="http://donjones.com/feed/" htmlUrl="https://donjones.com"/>
+        <outline type="rss" text="CloudTweaks" title="CloudTweaks" xmlUrl="http://www.cloudtweaks.com/feed/" htmlUrl="https://cloudtweaks.com"/>
+        <outline type="rss" text="beaudry.io" title="beaudry.io" xmlUrl="https://beaudry.io/feed" htmlUrl="https://beaudry.io/"/>
+        <outline type="rss" text="Comments on: Blog" title="Comments on: Blog" xmlUrl="http://www.prof-its.be/wp/blog/feed/" htmlUrl="http://www.prof-its.be/wp"/>
+        <outline type="rss" text="The Practical Dev" title="The Practical Dev" xmlUrl="http://thepracticaldev.com/feed" htmlUrl="https://dev.to"/>
+    </body>
+</opml>
