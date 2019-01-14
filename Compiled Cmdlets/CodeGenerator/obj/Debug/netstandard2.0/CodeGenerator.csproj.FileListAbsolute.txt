@@ -1,0 +1,11 @@
+C:\Users\thoma\OneDrive\Documents\MVP\git\Presentation-Files\Compiled Cmdlets\CodeGenerator\bin\Debug\netstandard2.0\CodeGenerator.deps.json
+C:\Users\thoma\OneDrive\Documents\MVP\git\Presentation-Files\Compiled Cmdlets\CodeGenerator\bin\Debug\netstandard2.0\CodeGenerator.dll
+C:\Users\thoma\OneDrive\Documents\MVP\git\Presentation-Files\Compiled Cmdlets\CodeGenerator\bin\Debug\netstandard2.0\CodeGenerator.pdb
+C:\Users\thoma\OneDrive\Documents\MVP\git\Presentation-Files\Compiled Cmdlets\CodeGenerator\bin\Debug\netstandard2.0\YouDidntMakeMe.dll
+C:\Users\thoma\OneDrive\Documents\MVP\git\Presentation-Files\Compiled Cmdlets\CodeGenerator\obj\Debug\netstandard2.0\CodeGenerator.csprojAssemblyReference.cache
+C:\Users\thoma\OneDrive\Documents\MVP\git\Presentation-Files\Compiled Cmdlets\CodeGenerator\obj\Debug\netstandard2.0\CodeGenerator.csproj.CoreCompileInputs.cache
+C:\Users\thoma\OneDrive\Documents\MVP\git\Presentation-Files\Compiled Cmdlets\CodeGenerator\obj\Debug\netstandard2.0\CodeGenerator.AssemblyInfoInputs.cache
+C:\Users\thoma\OneDrive\Documents\MVP\git\Presentation-Files\Compiled Cmdlets\CodeGenerator\obj\Debug\netstandard2.0\CodeGenerator.AssemblyInfo.cs
+C:\Users\thoma\OneDrive\Documents\MVP\git\Presentation-Files\Compiled Cmdlets\CodeGenerator\obj\Debug\netstandard2.0\CodeGenerator.csproj.CopyComplete
+C:\Users\thoma\OneDrive\Documents\MVP\git\Presentation-Files\Compiled Cmdlets\CodeGenerator\obj\Debug\netstandard2.0\CodeGenerator.dll
+C:\Users\thoma\OneDrive\Documents\MVP\git\Presentation-Files\Compiled Cmdlets\CodeGenerator\obj\Debug\netstandard2.0\CodeGenerator.pdb

@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "c:\\Users\\thoma\\OneDrive\\Documents\\MVP\\git\\Presentation-Files\\Compiled Cmdlets\\SayHello\\SayHello.csproj",
+  "TargetFramework": "netstandard2.0",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}

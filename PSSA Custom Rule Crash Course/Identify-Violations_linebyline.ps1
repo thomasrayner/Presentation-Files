@@ -1,3 +1,5 @@
+import-module asthelper, psscriptanalyzer
+
 Find-Module -Name AstHelper -Repository PSGallery | select *
 
 
@@ -5,7 +7,7 @@ Get-Command -Module AstHelper
 
 
 # Open Simple-Function.ps1, store path below
-$simple = 'C:\Users\thomas\OneDrive\Documents\MVP\git\Presentation-Files\PSSA Custom Rule Crash Course\Simple-Function.ps1'
+$simple = 'C:\Users\tfrayner\OneDrive - Personal\OneDrive\Documents\MVP\git\Presentation-Files\PSSA Custom Rule Crash Course\Simple-Function.ps1'
 
 
 Get-Command -Name Get-AstType | select -expand Definition
@@ -38,7 +40,7 @@ $param.Attributes.NamedArguments
 
 
 # Switch to, examine testfile.ps1
-$complicated = 'C:\Users\thomas\OneDrive\Documents\MVP\git\Presentation-Files\PSSA Custom Rule Crash Course\More-Complicated.ps1'
+$complicated = 'C:\Users\tfrayner\OneDrive - Personal\OneDrive\Documents\MVP\git\Presentation-Files\PSSA Custom Rule Crash Course\More-Complicated.ps1'
 
 Invoke-ScriptAnalyzer -Path $complicated
 

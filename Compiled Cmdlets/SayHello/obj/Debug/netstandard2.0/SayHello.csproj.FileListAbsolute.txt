@@ -1,0 +1,9 @@
+C:\Users\thoma\OneDrive\Documents\MVP\git\Presentation-Files\Compiled Cmdlets\SayHello\bin\Debug\netstandard2.0\SayHello.deps.json
+C:\Users\thoma\OneDrive\Documents\MVP\git\Presentation-Files\Compiled Cmdlets\SayHello\bin\Debug\netstandard2.0\SayHello.dll
+C:\Users\thoma\OneDrive\Documents\MVP\git\Presentation-Files\Compiled Cmdlets\SayHello\bin\Debug\netstandard2.0\SayHello.pdb
+C:\Users\thoma\OneDrive\Documents\MVP\git\Presentation-Files\Compiled Cmdlets\SayHello\obj\Debug\netstandard2.0\SayHello.csprojAssemblyReference.cache
+C:\Users\thoma\OneDrive\Documents\MVP\git\Presentation-Files\Compiled Cmdlets\SayHello\obj\Debug\netstandard2.0\SayHello.csproj.CoreCompileInputs.cache
+C:\Users\thoma\OneDrive\Documents\MVP\git\Presentation-Files\Compiled Cmdlets\SayHello\obj\Debug\netstandard2.0\SayHello.AssemblyInfoInputs.cache
+C:\Users\thoma\OneDrive\Documents\MVP\git\Presentation-Files\Compiled Cmdlets\SayHello\obj\Debug\netstandard2.0\SayHello.AssemblyInfo.cs
+C:\Users\thoma\OneDrive\Documents\MVP\git\Presentation-Files\Compiled Cmdlets\SayHello\obj\Debug\netstandard2.0\SayHello.dll
+C:\Users\thoma\OneDrive\Documents\MVP\git\Presentation-Files\Compiled Cmdlets\SayHello\obj\Debug\netstandard2.0\SayHello.pdb

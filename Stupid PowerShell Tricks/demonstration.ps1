@@ -11,6 +11,7 @@ remove-item '.\*' -force -Recurse
 clear-host
 #endregion
 
+# Write something here... 
 
 
 #region 01. select-object hashtables

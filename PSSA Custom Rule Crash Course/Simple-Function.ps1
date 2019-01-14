@@ -1,6 +1,6 @@
 function Test-Function {
     param (
-        [parameter(Mandatory)][string]$FirstParameter
+        [parameter(Mandatory)]$FirstParameter
         #$FirstParameter
     )
     Write-Output $FirstParameter 

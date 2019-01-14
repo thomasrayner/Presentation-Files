@@ -1,0 +1,9 @@
+C:\Users\thoma\OneDrive\Documents\MVP\git\Presentation-Files\Compiled Cmdlets\RunSoManyTimes\bin\Debug\netstandard2.0\RunSoManyTimes.deps.json
+C:\Users\thoma\OneDrive\Documents\MVP\git\Presentation-Files\Compiled Cmdlets\RunSoManyTimes\bin\Debug\netstandard2.0\RunSoManyTimes.dll
+C:\Users\thoma\OneDrive\Documents\MVP\git\Presentation-Files\Compiled Cmdlets\RunSoManyTimes\bin\Debug\netstandard2.0\RunSoManyTimes.pdb
+C:\Users\thoma\OneDrive\Documents\MVP\git\Presentation-Files\Compiled Cmdlets\RunSoManyTimes\obj\Debug\netstandard2.0\RunSoManyTimes.csprojAssemblyReference.cache
+C:\Users\thoma\OneDrive\Documents\MVP\git\Presentation-Files\Compiled Cmdlets\RunSoManyTimes\obj\Debug\netstandard2.0\RunSoManyTimes.csproj.CoreCompileInputs.cache
+C:\Users\thoma\OneDrive\Documents\MVP\git\Presentation-Files\Compiled Cmdlets\RunSoManyTimes\obj\Debug\netstandard2.0\RunSoManyTimes.AssemblyInfoInputs.cache
+C:\Users\thoma\OneDrive\Documents\MVP\git\Presentation-Files\Compiled Cmdlets\RunSoManyTimes\obj\Debug\netstandard2.0\RunSoManyTimes.AssemblyInfo.cs
+C:\Users\thoma\OneDrive\Documents\MVP\git\Presentation-Files\Compiled Cmdlets\RunSoManyTimes\obj\Debug\netstandard2.0\RunSoManyTimes.dll
+C:\Users\thoma\OneDrive\Documents\MVP\git\Presentation-Files\Compiled Cmdlets\RunSoManyTimes\obj\Debug\netstandard2.0\RunSoManyTimes.pdb
