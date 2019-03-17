@@ -7,3 +7,12 @@ C:\Users\thoma\OneDrive\Documents\MVP\git\Presentation-Files\Compiled Cmdlets\Ru
 C:\Users\thoma\OneDrive\Documents\MVP\git\Presentation-Files\Compiled Cmdlets\RunSoManyTimes\obj\Debug\netstandard2.0\RunSoManyTimes.AssemblyInfo.cs
 C:\Users\thoma\OneDrive\Documents\MVP\git\Presentation-Files\Compiled Cmdlets\RunSoManyTimes\obj\Debug\netstandard2.0\RunSoManyTimes.dll
 C:\Users\thoma\OneDrive\Documents\MVP\git\Presentation-Files\Compiled Cmdlets\RunSoManyTimes\obj\Debug\netstandard2.0\RunSoManyTimes.pdb
+C:\git\presentation-files\Compiled Cmdlets\RunSoManyTimes\bin\Debug\netstandard2.0\RunSoManyTimes.deps.json
+C:\git\presentation-files\Compiled Cmdlets\RunSoManyTimes\bin\Debug\netstandard2.0\RunSoManyTimes.dll
+C:\git\presentation-files\Compiled Cmdlets\RunSoManyTimes\bin\Debug\netstandard2.0\RunSoManyTimes.pdb
+C:\git\presentation-files\Compiled Cmdlets\RunSoManyTimes\obj\Debug\netstandard2.0\RunSoManyTimes.csprojAssemblyReference.cache
+C:\git\presentation-files\Compiled Cmdlets\RunSoManyTimes\obj\Debug\netstandard2.0\RunSoManyTimes.csproj.CoreCompileInputs.cache
+C:\git\presentation-files\Compiled Cmdlets\RunSoManyTimes\obj\Debug\netstandard2.0\RunSoManyTimes.AssemblyInfoInputs.cache
+C:\git\presentation-files\Compiled Cmdlets\RunSoManyTimes\obj\Debug\netstandard2.0\RunSoManyTimes.AssemblyInfo.cs
+C:\git\presentation-files\Compiled Cmdlets\RunSoManyTimes\obj\Debug\netstandard2.0\RunSoManyTimes.dll
+C:\git\presentation-files\Compiled Cmdlets\RunSoManyTimes\obj\Debug\netstandard2.0\RunSoManyTimes.pdb

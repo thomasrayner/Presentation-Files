@@ -26,7 +26,7 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "PowerShellStandard.Library/5.1.0": {
+      "PowerShellStandard.Library/5.1.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/System.Management.Automation.dll": {}
@@ -181,15 +181,16 @@
         "netstandard.library.nuspec"
       ]
     },
-    "PowerShellStandard.Library/5.1.0": {
-      "sha512": "v3Oz8Hic3f4+cxrqrzuHMv2nKkWp/BxQ+jC/0p65uZVoXkV8GSnqFQE1YxHxFB5bbKJSm9i5xmSGPQWBYP1yqg==",
+    "PowerShellStandard.Library/5.1.1": {
+      "sha512": "GYZRMyR0t4aUN0w140qNWezmNdz1NzDao25IqsWoWKOb77wEQabASyQHwVngA4Vv4HTC75VQ/iBDdcFH4FFmXw==",
       "type": "package",
-      "path": "powershellstandard.library/5.1.0",
+      "path": "powershellstandard.library/5.1.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "lib/net452/System.Management.Automation.dll",
         "lib/netstandard2.0/System.Management.Automation.dll",
-        "powershellstandard.library.5.1.0.nupkg.sha512",
+        "powershellstandard.library.5.1.1.nupkg.sha512",
         "powershellstandard.library.nuspec"
       ]
     }
@@ -197,7 +198,7 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "NETStandard.Library >= 2.0.3",
-      "PowerShellStandard.Library >= 5.1.0"
+      "PowerShellStandard.Library >= 5.1.1"
     ]
   },
   "packageFolders": {
@@ -207,11 +208,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\thoma\\OneDrive\\Documents\\MVP\\git\\Presentation-Files\\Compiled Cmdlets\\SayHello\\SayHello.csproj",
+      "projectUniqueName": "C:\\git\\presentation-files\\Compiled Cmdlets\\SayHello\\SayHello.csproj",
       "projectName": "SayHello",
-      "projectPath": "C:\\Users\\thoma\\OneDrive\\Documents\\MVP\\git\\Presentation-Files\\Compiled Cmdlets\\SayHello\\SayHello.csproj",
+      "projectPath": "C:\\git\\presentation-files\\Compiled Cmdlets\\SayHello\\SayHello.csproj",
       "packagesPath": "C:\\Users\\thoma\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\thoma\\OneDrive\\Documents\\MVP\\git\\Presentation-Files\\Compiled Cmdlets\\SayHello\\obj\\",
+      "outputPath": "C:\\git\\presentation-files\\Compiled Cmdlets\\SayHello\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -249,7 +250,7 @@
           },
           "PowerShellStandard.Library": {
             "target": "Package",
-            "version": "[5.1.0, )"
+            "version": "[5.1.1, )"
           }
         },
         "imports": [
