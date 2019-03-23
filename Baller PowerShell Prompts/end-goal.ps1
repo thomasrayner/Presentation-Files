@@ -2,33 +2,35 @@ $forePromptColor = 0
 
 [System.Collections.Generic.List[ScriptBlock]]$global:PromptRight = @(
     # right aligned
-    { "$F;${er}m{0}" -f [char]0xe0b2 }
-    { "$F;${forePromptColor}m$B;${er}m{0}" -f $(if (@(get-history).Count -gt 0) {(get-history)[-1] | % { "{0:c}" -f (new-timespan $_.StartExecutionTime $_.EndExecutionTime)}}else {'00:00:00.0000000'}) }
+    { "$foreground;${errorStatus}m{0}" -f $lArrow }
+    { "$foreground;${forePromptColor}m$background;${errorStatus}m{0}" -f $(if (@(get-history).Count -gt 0) {(get-history)[-1] | % { "{0:c}" -f (new-timespan $_.StartExecutionTime $_.EndExecutionTime)}}else {'00:00:00.0000000'}) }
     
-    { "$F;7m$B;${er}m{0}" -f [char]0xe0b2 }
-    { "$F;0m$B;7m{0}" -f $(get-date -format "hh:mm:ss tt") }
+    { "$foreground;7m$background;${errorStatus}m{0}" -f $lArrow }
+    { "$foreground;0m$background;7m{0}" -f $(get-date -format "hh:mm:ss tt") }
 )
 
 [System.Collections.Generic.List[ScriptBlock]]$global:PromptLeft = @(
     # left aligned
-    { "$F;${forePromptColor}m$B;${global:plat}m{0}" -f $('{0:d4}' -f $MyInvocation.HistoryId) }
-    { "$B;22m$F;${global:plat}m{0}" -f $([char]0xe0b0) }
+    { "$foreground;${forePromptColor}m$background;${global:plat}m{0}" -f $('{0:d4}' -f $MyInvocation.HistoryId) }
+    { "$background;22m$foreground;${global:platform}m{0}" -f $($rArrow) }
     
-    { "$B;22m$F;${forePromptColor}m{0}" -f $(if ($pushd = (Get-Location -Stack).count) { "$([char]187)" + $pushd }) }
-    { "$F;22m$B;5m{0}" -f $([char]0xe0b0) }
+    { "$background;22m$foreground;${forePromptColor}m{0}" -f $(if ($pushd = (Get-Location -Stack).count) { "$([char]187)" + $pushd }) }
+    { "$foreground;22m$background;5m{0}" -f $rArrow }
     
-    { "$B;5m$F;${forePromptColor}m{0}" -f $($pwd.Drive.Name) }
-    { "$B;14m$F;5m{0}" -f $([char]0xe0b0) }
+    { "$background;5m$foreground;${forePromptColor}m{0}" -f $($pwd.Drive.Name) }
+    { "$background;14m$foreground;5m{0}" -f $rArrow }
     
-    { "$B;14m$F;${forePromptColor}m{0}$E[0m" -f $(Split-Path $pwd -leaf) }
+    { "$background;14m$foreground;${forePromptColor}m{0}$escape[0m" -f $(Split-Path $pwd -leaf) }
 )
 function global:prompt {
-    $global:er = if ($?) {22}else {1}
-    $global:plat = if ($isWindows) {11}else {117}
-    $E = "$([char]27)"
-    $F = "$E[38;5"
-    $B = "$E[48;5"
-    $p = ''
+    $global:errorStatus = if ($?) {22}else {1}
+    $global:platform = if ($isWindows) {11}else {117}
+    $global:lArrow = [char]0xe0b2
+    $global:rArrow = [char]0xe0b0
+    $escape = "$([char]27)"
+    $foreground = "$escape[38;5"
+    $background = "$escape[48;5"
+    $prompt = ''
         
     $gitTest = $(git config -l) -match 'branch\.'
     if (-not [string]::IsNullOrEmpty($gitTest)) {
@@ -46,28 +48,28 @@ function global:prompt {
             $ahead = [regex]::matches($aheadbehind, '(?<=ahead\s)\d+').value
             $behind = [regex]::matches($aheadbehind, '(?<=behind\s)\d+').value
     
-            $distance = "$B;15m$F;${arrowfg}m{0}$E[0m" -f $([char]0xe0b0)
-            if ($ahead) {$distance += "$B;15m$F;${forePromptColor}m{0}$E[0m" -f "a$ahead"}
-            if ($behind) {$distance += "$B;15m$F;${forePromptColor}m{0}$E[0m" -f "b$behind"}
-            $distance += "$F;15m{0}$E[0m" -f $([char]0xe0b0)
+            $distance = "$background;15m$foreground;${arrowfg}m{0}$escape[0m" -f $rArrow
+            if ($ahead) {$distance += "$background;15m$foreground;${forePromptColor}m{0}$escape[0m" -f "a$ahead"}
+            if ($behind) {$distance += "$background;15m$foreground;${forePromptColor}m{0}$escape[0m" -f "b$behind"}
+            $distance += "$foreground;15m{0}$escape[0m" -f $rArrow
         }
         else {
-            $distance = "$F;${arrowfg}m{0}$E[0m" -f $([char]0xe0b0)
+            $distance = "$foreground;${arrowfg}m{0}$escape[0m" -f $rArrow
         }
     
         [System.Collections.Generic.List[ScriptBlock]]$gitPrompt = @(
-            { "$B;${branchbg}m$F;14m{0}$E[0m" -f $([char]0xe0b0) }
-            { "$B;${branchbg}m$F;${forePromptColor}m{0}$E[0m" -f $branch }
-            { "{0}$E[0m" -f $distance }
+            { "$background;${branchbg}m$foreground;14m{0}$escape[0m" -f $rArrow }
+            { "$background;${branchbg}m$foreground;${forePromptColor}m{0}$escape[0m" -f $branch }
+            { "{0}$escape[0m" -f $distance }
         )
-        $p = -join @($global:PromptLeft + $gitPrompt + {" "}).Invoke()
+        $prompt = -join @($global:PromptLeft + $gitPrompt + {" "}).Invoke()
     }
     else {
-        $p = -join @($global:PromptLeft + { "$F;14m{0}$E[0m" -f $([char]0xe0b0) } + {" "}).Invoke()
+        $prompt = -join @($global:PromptLeft + { "$foreground;14m{0}$escape[0m" -f $rArrow } + {" "}).Invoke()
     }
     
-    $l = -join ($global:promptRight).Invoke()
-    $o = $global:host.UI.RawUI.BufferSize.Width - 28
-    $r = -join @($p, "$E[${o}G", $l, "$E[0m" + "`n`r`> ")
-    $r
+    $rightPromptString = -join ($global:promptRight).Invoke()
+    $offset = $global:host.UI.RawUI.BufferSize.Width - 28
+    $returnedPrompt = -join @($prompt, "$escape[${offset}G", $rightPromptString, "$escape[0m" + "`n`r`> ")
+    $returnedPrompt
 }
