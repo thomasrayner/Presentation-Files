@@ -1,0 +1,1 @@
+The presentation and recordings are too big for GitHub's 100 mb file size limit, so I can't put them here. But here's some of the demo code I build in this session.
