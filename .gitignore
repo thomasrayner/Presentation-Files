@@ -1,5 +1,7 @@
+# files that are too big
 *.mp4
-*.cache
+Compiled Cmdlets/Compiled_Cmdlets.pptx
+
 
 # Windows image file caches
 Thumbs.db
@@ -81,6 +83,8 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
+
+**
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
