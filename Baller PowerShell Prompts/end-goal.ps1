@@ -11,7 +11,7 @@ $forePromptColor = 0
 
 [System.Collections.Generic.List[ScriptBlock]]$global:PromptLeft = @(
     # left aligned
-    { "$foreground;${forePromptColor}m$background;${global:plat}m{0}" -f $('{0:d4}' -f $MyInvocation.HistoryId) }
+    { "$foreground;${forePromptColor}m$background;${global:platform}m{0}" -f $('{0:d4}' -f $MyInvocation.HistoryId) }
     { "$background;22m$foreground;${global:platform}m{0}" -f $($rArrow) }
     
     { "$background;22m$foreground;${forePromptColor}m{0}" -f $(if ($pushd = (Get-Location -Stack).count) { "$([char]187)" + $pushd }) }
